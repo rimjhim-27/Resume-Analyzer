@@ -1,0 +1,6 @@
+streamlit>=1.35.0
+pdfplumber>=0.11.0
+pypdf>=4.0.0
+matplotlib>=3.8.0
+numpy>=1.26.0
+wordcloud>=1.9.3
