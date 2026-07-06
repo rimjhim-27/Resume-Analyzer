@@ -1,34 +1,50 @@
-# Resume Analyzer v3 — AI-Powered Career Assistant
+# Resume Analyzer v3
 
-## Setup
+Resume Analyzer v3 is a Streamlit-based application that helps job seekers evaluate their resumes, understand ATS compatibility, and receive personalized improvement suggestions.
+
+## Features
+- ATS score analysis across multiple resume dimensions
+- Skill gap identification and role prediction
+- Personalized learning roadmap suggestions
+- Visual charts for resume quality and improvement areas
+- Clean interactive dashboard for easy review
+
+## Project Structure
+```text
+resume-analyzer-v3/
+├── app.py                    # Main Streamlit application
+├── ats_calculator.py         # ATS scoring logic
+├── resume_classifier.py      # Role prediction engine
+├── skills_database.py        # Skill database and scoring weights
+├── requirements.txt          # Python dependencies
+├── README.md                 # Project documentation
+├── .streamlit/config.toml    # Streamlit theme settings
+├── resumes/
+│   ├── resume_parser.py      # Resume text parsing logic
+│   └── skill_extractor.py    # Skill extraction logic
+└── utils/
+    ├── charts.py             # Visualization helpers
+    ├── suggestions.py        # Improvement recommendations
+    ├── roadmap_generator.py  # Learning roadmap generation
+    └── wordcloud_generator.py
+```
+
+## Installation
 ```bash
 pip install -r requirements.txt
+```
+
+## Run the App
+```bash
 streamlit run app.py
 ```
 
-## Features
-- Modern dashboard UI matching professional design
-- Weighted ATS scoring across 7 dimensions
-- Skill gap analysis with color-coded chips
-- Role prediction with confidence scores
-- 8-week personalized learning roadmap
-- Section checklist, radar chart, ATS gauge
+## Usage
+1. Launch the app with Streamlit.
+2. Upload or analyze a resume.
+3. Review the ATS score, skill gaps, and suggestions.
+4. Use the roadmap to improve your resume for target roles.
 
-## Structure
-```
-resume-analyzer-v3/
-├── app.py                    # Main Streamlit app (full dashboard UI)
-├── ats_calculator.py         # Weighted 7-dimension ATS scoring
-├── resume_classifier.py      # Role prediction engine
-├── skills_database.py        # 110+ skills with weights by category
-├── requirements.txt
-├── .streamlit/config.toml    # Theme — purple/indigo palette
-├── resumes/
-│   ├── resume_parser.py      # Layout-aware PDF text extraction
-│   └── skill_extractor.py    # Phrase-matching skill extractor
-└── utils/
-    ├── charts.py             # Gauge, radar, bar, role charts
-    ├── suggestions.py        # Prioritized improvement tips
-    ├── roadmap_generator.py  # Dynamic 8-week roadmap
-    └── wordcloud_generator.py
-```
+## License
+This project is for educational and personal use.
+
